@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio Hasbih Cesaro Ramadhan - 3D Artist, Web & Game Developer dari Surabaya">
+    <title>Portfolio | Hasbih Cesaro Ramadhan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Share+Tech+Mono&family=Silkscreen:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-glitch" data-text="LOADING...">LOADING...</div>
+            <div class="preloader-bar-wrap">
+                <div class="preloader-bar"></div>
+            </div>
+            <div class="preloader-status">INITIALIZING SYSTEM...</div>
+        </div>
+    </div>
+    <!-- Mesh Background -->
+    <div class="mesh-bg">
+        <div class="mesh-orb mesh-orb-1"></div>
+        <div class="mesh-orb mesh-orb-2"></div>
+        <div class="mesh-orb mesh-orb-3"></div>
+    </div>
+
+    <!-- ========== NAVBAR ========== -->
+    <header id="header">
+        <nav class="navbar">
+            <a href="#home" class="logo">
+                <span class="logo-icon">◆</span>
+                <span class="logo-text-desktop">Hace<span class="logo-accent">rnn</span></span>
+                <span class="logo-text-mobile">Hace<span class="logo-accent">rnn</span></span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#tentang" class="nav-link">Tentang</a></li>
+                <li><a href="#keahlian" class="nav-link">Keahlian</a></li>
+                <li><a href="#proyek" class="nav-link">Proyek</a></li>
+                <li><a href="#kontak" class="nav-link">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section id="home" class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <p class="hero-greeting">Halo, nama saya "Hasbih Cesaro Ramadhan"</p>
+                <h1 class="hero-name">Hasbih Cesaro<br>Ramadhan</h1>
+                <p class="hero-role">Saya adalah seorang <span class="typing-wrapper"><strong id="typingText">3D
+                            Artist</strong><span class="cursor-blink">|</span></span></p>
+                <div class="hero-socials">
+                    <a href="https://github.com/Hacernn" class="social-icon" aria-label="GitHub" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/hasbih-cesaro-ramadhan-6a07103b1/" class="social-icon"
+                        aria-label="LinkedIn" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.instagram.com/hasbihcesaro/" class="social-icon" aria-label="Instagram"
+                        target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+                <div class="hero-actions">
+                    <a href="#proyek" class="btn btn-primary">
+                        <span>Lihat Project Saya</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#kontak" class="btn btn-ghost">Hubungi Saya</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-img-container">
+                    <div class="hero-ring hero-ring-1"></div>
+                    <div class="hero-ring hero-ring-2"></div>
+                    <div class="hero-img-frame">
+                        <img src="wajah1.jpeg" alt="Foto Profil Saya">
+                    </div>
+                    <!-- Floating badges around image -->
+                    <div class="floating-badge fb-1">
+                        <i class="fab fa-unity"></i>
+                    </div>
+                    <div class="floating-badge fb-2">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <div class="floating-badge fb-3">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Floating particles -->
+        <canvas id="particleCanvas"></canvas>
+    </section>
+
+    <!-- ========== TENTANG SECTION ========== -->
+    <section id="tentang" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Tentang</span>
+                <h2 class="section-title">Tentang <span class="text-gradient">Saya</span></h2>
+            </div>
+            <div class="about-card glass-card">
+                <div class="about-content">
+                    <p class="about-text">
+                        Saya adalah seorang pengembang web dan game muda yang saat ini
+                        menempuh pendidikan di SMKN 12 Surabaya. Di usia 17 tahun, saya telah
+                        mendedikasikan waktu saya untuk mempelajari teknologi terbaru guna
+                        menciptakan solusi digital yang inovatif.
+                    </p>
+
+                    <a href="javascript:void(0)" id="openCvBtn" class="btn btn-outline">
+                        <i class="fas fa-file-alt"></i>
+                        <span>Lihat Profil CV</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== KEAHLIAN SECTION ========== -->
+    <section id="keahlian" class="skills-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Skills</span>
+                <h2 class="section-title">Keahlian Teknis</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card glass-card">
+                    <div class="skill-icon-wrap">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <p class="skill-name">HTML5</p>
+                    <div class="skill-level">
+                        <div class="skill-bar" data-width="90"></div>
+                    </div>
+                </div>
+                <div class="skill-card glass-card">
+                    <div class="skill-icon-wrap">
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <p class="skill-name">CSS3</p>
+                    <div class="skill-level">
+                        <div class="skill-bar" data-width="85"></div>
+                    </div>
+                </div>
+                <div class="skill-card glass-card">
+                    <div class="skill-icon-wrap">
+                        <i class="fab fa-js-square"></i>
+                    </div>
+                    <p class="skill-name">JavaScript</p>
+                    <div class="skill-level">
+                        <div class="skill-bar" data-width="75"></div>
+                    </div>
+                </div>
+                <div class="skill-card glass-card">
+                    <div class="skill-icon-wrap">
+                        <i class="fab fa-unity"></i>
+                    </div>
+                    <p class="skill-name">Unity</p>
+                    <div class="skill-level">
+                        <div class="skill-bar" data-width="80"></div>
+                    </div>
+                </div>
+                <div class="skill-card glass-card">
+                    <div class="skill-icon-wrap">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <p class="skill-name">C#</p>
+                    <div class="skill-level">
+                        <div class="skill-bar" data-width="70"></div>
+                    </div>
+                </div>
+                <div class="skill-card glass-card">
+                    <div class="skill-icon-wrap">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <p class="skill-name">Blender</p>
+                    <div class="skill-level">
+                        <div class="skill-bar" data-width="85"></div>
+                    </div>
+                </div>
+                <div class="skill-card glass-card">
+                    <div class="skill-icon-wrap">
+                        <i class="fab fa-figma"></i>
+                    </div>
+                    <p class="skill-name">Figma</p>
+                    <div class="skill-level">
+                        <div class="skill-bar" data-width="75"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PROYEK SECTION ========== -->
+    <section id="proyek" class="projects-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Projects</span>
+                <h2 class="section-title">Proyek Terbaru</h2>
+            </div>
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="semua">Semua</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="game">Game</button>
+                <button class="filter-btn" data-filter="asset">Asset / Blender</button>
+            </div>
+            <div class="projects-grid">
+                <!-- Project Web 1 -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="webgresiktampilan0.png" alt="Website Portfolio" class="project-thumb">
+                    </div>
+                    <div class="project-info">
+                        <div class="project-category-tag">Web</div>
+                        <h3>GRESIK VIBES</h3>
+                        <p>Website Yg memperkenalkan Budaya, game, dan wisata dari Kota Gresik</p>
+                        <div class="project-tags">
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                        </div>
+                        <div class="project-actions" style="margin-top: 15px; display: flex; gap: 10px;">
+                            <a href="https://pplgrolas.my.id/0082303448/Gresik/Frontend/index.php?" target="_blank"
+                                class="btn btn-primary" style="padding: 8px 16px; font-size: 0.75rem;">Kunjungi Web</a>
+                            <button class="btn btn-outline detail-btn" data-project="web1"
+                                style="padding: 8px 16px; font-size: 0.75rem;">Detail</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Game 1 -->
+                <div class="project-card" data-category="game">
+                    <div class="project-image">
+                        <img src="logogame2d.png" alt="The great Angler" class="project-thumb">
+                    </div>
+                    <div class="project-info">
+                        <div class="project-category-tag">Game</div>
+                        <h3>The great Angler</h3>
+                        <p>Game 2D Yg bertujuan untuk menyelesaikan misi di setiap level yaitu memancing ikan yg
+                            dibutuhkan untuk misi di setiap levelnya</p>
+                        <div class="project-tags">
+                            <span>Unity</span><span>C#</span><span>2D</span>
+                        </div>
+                        <div class="project-actions" style="margin-top: 15px; display: flex; gap: 10px;">
+                            <button class="btn btn-outline detail-btn" data-project="game1"
+                                style="padding: 8px 16px; font-size: 0.75rem;">Detail</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Game 2 -->
+                <div class="project-card" data-category="game">
+                    <div class="project-image">
+                        <img src="game3dicon.png" alt="The Legend of Aji" class="project-thumb">
+                    </div>
+                    <div class="project-info">
+                        <div class="project-category-tag">Game</div>
+                        <h3>The Legend of Aji</h3>
+                        <p>Game yg berkisah tentang karakter Aji saka dari legenda jawa tengah yg membebaskan Pulaunya
+                            dari raja jahat yg menguasai pulaui, yaitu Raja Dewata Cengkar</p>
+                        <div class="project-tags">
+                            <span>Unity</span><span>C#</span><span>3D</span>
+                        </div>
+                        <div class="project-actions" style="margin-top: 15px; display: flex; gap: 10px;">
+                            <button class="btn btn-outline detail-btn" data-project="game2"
+                                style="padding: 8px 16px; font-size: 0.75rem;">Detail</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Blender 1 -->
+                <div class="project-card" data-category="asset">
+                    <div class="project-image">
+                        <img src="charactercowok1.png" alt="3D Character Model" class="project-thumb">
+                    </div>
+                    <div class="project-info">
+                        <div class="project-category-tag">Asset</div>
+                        <h3>3D Character Model</h3>
+                        <p>Pemodelan karakter 3D bergaya fantasi menggunakan Blender.</p>
+                        <div class="project-tags">
+                            <span>Blender</span><span>3D</span><span>Character</span>
+                        </div>
+                        <div class="project-actions" style="margin-top: 15px; display: flex; gap: 10px;">
+                            <button class="btn btn-outline detail-btn" data-project="asset1"
+                                style="padding: 8px 16px; font-size: 0.75rem;">Detail</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Blender 2 -->
+                <div class="project-card" data-category="asset">
+                    <div class="project-image">
+                        <img src="ajisaka1.png" alt="Environment Assets" class="project-thumb">
+                    </div>
+                    <div class="project-info">
+                        <div class="project-category-tag">Asset</div>
+                        <h3>Aji Saka</h3>
+                        <p>Karakter Utama dari game The Legend Of Aji</p>
+                        <div class="project-tags">
+                            <span>Blender</span><span>3D</span><span>Character</span>
+                        </div>
+                        <div class="project-actions" style="margin-top: 15px; display: flex; gap: 10px;">
+                            <button class="btn btn-outline detail-btn" data-project="asset2"
+                                style="padding: 8px 16px; font-size: 0.75rem;">Detail</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Blender 3 -->
+                <div class="project-card" data-category="asset">
+                    <div class="project-image">
+                        <img src="dewatacengkar1.png" alt="3D Weapon Model" class="project-thumb">
+                    </div>
+                    <div class="project-info">
+                        <div class="project-category-tag">Asset</div>
+                        <h3>Dewata Cengkar</h3>
+                        <p>Musuh Utama dari game The Legend Of Aji</p>
+                        <div class="project-tags">
+                            <span>Blender</span><span>3D</span><span>Character</span>
+                        </div>
+                        <div class="project-actions" style="margin-top: 15px; display: flex; gap: 10px;">
+                            <button class="btn btn-outline detail-btn" data-project="asset3"
+                                style="padding: 8px 16px; font-size: 0.75rem;">Detail</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Blender 4 -->
+                <div class="project-card" data-category="asset">
+                    <div class="project-image">
+                        <img src="rohpenjaga0.png" alt="3D Vehicle Model" class="project-thumb">
+                    </div>
+                    <div class="project-info">
+                        <div class="project-category-tag">Asset</div>
+                        <h3>Roh Penjaga</h3>
+                        <p>Prajurit Penjaga di game The Legend of Aji</p>
+                        <div class="project-tags">
+                            <span>Blender</span><span>3D</span><span>Character</span>
+                        </div>
+                        <div class="project-actions" style="margin-top: 15px; display: flex; gap: 10px;">
+                            <button class="btn btn-outline detail-btn" data-project="asset4"
+                                style="padding: 8px 16px; font-size: 0.75rem;">Detail</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== KONTAK SECTION ========== -->
+    <section id="kontak" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Contact</span>
+                <h2 class="section-title"><span class="text-gradient">Hubungi Saya</span></h2>
+            </div>
+            <div class="contact-wrapper glass-card">
+                <div class="contact-info">
+                    <h3 class="contact-heading">Mari Terhubung</h3>
+                    <p class="contact-subtext">Jangan ragu untuk menghubungi saya kapan saja.</p>
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="contact-detail">
+                                <h4>Alamat</h4>
+                                <p>Jl. Mbalas Klumprik No. 104, Surabaya,<br>Jawa Timur</p>
+                                <a href="https://maps.google.com" target="_blank" class="contact-link">
+                                    Lihat di Google Maps <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div class="contact-detail">
+                                <h4>Telepon</h4>
+                                <p>+62 895-2535-5173</p>
+                                <a href="tel:+6289525355173" class="contact-link">
+                                    Hubungi Saya <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="contact-detail">
+                                <h4>Email</h4>
+                                <p>hasbihcesa@email.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form action="https://formsubmit.co/hasbihcesa@gmail.com" method="POST" class="contact-form"
+                    id="contactForm">
+                    <!-- FormSubmit Configuration -->
+                    <input type="hidden" name="_subject" value="Pesan Baru dari Website Portfolio!">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+
+                    <div class="form-group">
+                        <label for="formName">Nama Lengkap</label>
+                        <input type="text" name="name" placeholder="Masukkan nama anda" id="formName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="formEmail">Alamat Email</label>
+                        <input type="email" name="email" placeholder="Masukkan email anda" id="formEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="formMessage">Pesan</label>
+                        <textarea name="message" placeholder="Tuliskan pesan anda..." id="formMessage" rows="5"
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <span>Kirim Pesan</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="#home" class="footer-logo">
+                    <span class="logo-icon">◆</span>
+                    <span class="logo-text-desktop">Hace<span class="logo-accent">rnn</span></span>
+                    <span class="logo-text-mobile">Hace<span class="logo-accent">rnn</span></span>
+                </a>
+                <p class="footer-text">&copy; 2026 Hasbih Cesaro Ramadhan. All rights reserved.</p>
+                <div class="footer-socials">
+                    <a href="https://github.com/Hacernn" target="_blank" aria-label="GitHub"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/hasbih-cesaro-ramadhan-6a07103b1/" target="_blank"
+                        aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/hasbihcesaro/" target="_blank" aria-label="Instagram"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Kembali ke atas">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- CV Modal -->
+    <div id="cvModal" class="cv-modal">
+        <span class="cv-modal-close" id="closeCvModal">&times;</span>
+        <img class="cv-modal-content" id="cvImage" src="CV.png" alt="CV Profile">
+    </div>
+
+    <!-- Project Detail Modal -->
+    <div id="projectModal" class="project-modal">
+        <span class="project-modal-close" id="closeProjectModal">&times;</span>
+        <div class="project-carousel-container">
+            <button class="carousel-btn prev-btn" id="carouselPrev"><i class="fas fa-chevron-left"></i></button>
+            <div class="carousel-track-container">
+                <ul class="carousel-track" id="carouselTrack">
+                    <!-- Images injected via JS -->
+                </ul>
+            </div>
+            <button class="carousel-btn next-btn" id="carouselNext"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <script src="port.js"></script>
+</body>
+
+</html>
